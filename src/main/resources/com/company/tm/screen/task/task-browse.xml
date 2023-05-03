@@ -52,6 +52,7 @@
                 <column id="assignee"/>
                 <column id="project"/>
                 <column id="priority"/>
+                <column id="attachment"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
