@@ -1,6 +1,8 @@
 package com.company.tm;
 
 import com.google.common.base.Strings;
+import io.jmix.core.CoreProperties;
+import io.jmix.localfs.LocalFileStorage;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -45,5 +47,10 @@ public class TaskManagementApplication {
                 + "http://localhost:"
                 + environment.getProperty("local.server.port")
                 + Strings.nullToEmpty(environment.getProperty("server.servlet.context-path")));
+    }
+
+    @Bean
+    public LocalFileStorage secondFileStorage(CoreProperties coreProperties) {
+        return new LocalFileStorage("fs2", coreProperties.getWorkDir() + "/fs2");
     }
 }

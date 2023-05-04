@@ -40,6 +40,7 @@
         </filter>
         <groupTable id="tasksTable"
                     width="100%"
+                    multiselect="true"
                     dataContainer="tasksDc">
             <actions>
                 <action id="create" type="create"/>
@@ -53,6 +54,7 @@
                 <column id="project"/>
                 <column id="priority"/>
                 <column id="attachment"/>
+                <column id="attachment2"/>
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
@@ -61,6 +63,10 @@
                 <button id="editBtn" action="tasksTable.edit"/>
                 <button id="removeBtn" action="tasksTable.remove"/>
                 <button id="importBtn" caption="msg://importBtn.caption"/>
+                <fileStorageUpload id="importTaskField"
+                                   uploadButtonCaption="Import from File"
+                                   uploadButtonIcon="UPLOAD"
+                                   fileStoragePutMode="MANUAL"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

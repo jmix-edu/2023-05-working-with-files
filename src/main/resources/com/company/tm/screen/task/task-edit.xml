@@ -60,7 +60,11 @@
                         <fileStorageUpload id="attachmentField" property="attachment"
                                            showClearButton="true"
                                            uploadButtonIcon="UPLOAD"
-                                           dropZone="myDropZone"/>
+                                           dropZone="myDropZone"
+                                           fileStoragePutMode="MANUAL"/>
+                        <fileStorageUpload id="attachment2Field"
+                                           property="attachment2"
+                                           fileStorage="fs2"/>
                     </column>
                 </form>
                 <groupBox id="attachmentWrapper">
